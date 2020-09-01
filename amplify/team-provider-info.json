@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-ethswap-dev-150120-authRole",
+            "UnauthRoleArn": "arn:aws:iam::030701322547:role/amplify-ethswap-dev-150120-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::030701322547:role/amplify-ethswap-dev-150120-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "amplify-ethswap-dev-150120-deployment",
+            "UnauthRoleName": "amplify-ethswap-dev-150120-unauthRole",
+            "StackName": "amplify-ethswap-dev-150120",
+            "StackId": "arn:aws:cloudformation:eu-west-2:030701322547:stack/amplify-ethswap-dev-150120/3bbc2c50-ec53-11ea-a7dc-0ac6423403f2",
+            "AmplifyAppId": "d2r0slszddrwv9"
+        }
+    }
+}
