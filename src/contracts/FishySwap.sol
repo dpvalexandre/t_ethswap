@@ -1,46 +1,46 @@
 pragma solidity ^0.5.0;
 
-import "./Token.sol";
+import "./Tuna.sol";
 
-contract EthSwap {
-	string public name = "EthSwap Instant Exchange";
-	Token public token;
+contract FishySwap {
+	string public name = "FishySwap Instant Exchange";
+	Tuna public tuna;
 	uint public rate = 100;
 
-	event TokensPurchased(
+	event TunaPurchased(
 		address account,
-		address token,
+		address tuna,
 		uint amount,
 		uint rate
 		);
 
-	event TokensSold(
+	event TunaSold(
 		address account,
-		address token,
+		address tuna,
 		uint amount,
 		uint rate
 		);
 
-	constructor(Token _token) public {
-		token = _token;
+	constructor(Tuna _tuna) public {
+		tuna = _tuna;
 	}
 
 	function buyTokens() public  payable {
 		// number of tokens to buy
-		uint tokenAmount = msg.value * rate;
+		uint tunaAmount = msg.value * rate;
 		// verify that the exchange smart contract has enough tokens
-		require(token.balanceOf(address(this)) >= tokenAmount);
+		require(tuna.balanceOf(address(this)) >= tunaAmount);
 
-		token.transfer(msg.sender, tokenAmount);
+		tuna.transfer(msg.sender, tunaAmount);
 
 		//emit an event
-		emit TokensPurchased(msg.sender, address(token), tokenAmount, rate);
+		emit TunaPurchased(msg.sender, address(tuna), tunaAmount, rate);
 	}
 
 	function sellTokens(uint _amount) public {
 
 		//User can't sell more token than he have
-		require(token.balanceOf(msg.sender) >= _amount );
+		require(tuna.balanceOf(msg.sender) >= _amount );
 
 		
 		//calculate amount the amount of ether
@@ -49,12 +49,12 @@ contract EthSwap {
 		// verify that the exchange smart contract has enough tokens
 		require(address(this).balance >= etherAmount);
 
-		token.transferFrom(msg.sender, address(this), _amount);
+		tuna.transferFrom(msg.sender, address(this), _amount);
 		// Performs sell
 		msg.sender.transfer(etherAmount);
 
 		//emit an event
-		emit TokensSold(msg.sender, address(token), _amount, rate);
+		emit TunaSold(msg.sender, address(tuna), _amount, rate);
 
 	}
 

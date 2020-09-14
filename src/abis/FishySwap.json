@@ -1,11 +1,11 @@
 {
-  "contractName": "EthSwap",
+  "contractName": "FishySwap",
   "abi": [
     {
       "inputs": [
         {
-          "internalType": "contract Token",
-          "name": "_token",
+          "internalType": "contract Tuna",
+          "name": "_tuna",
           "type": "address"
         }
       ],
@@ -25,7 +25,7 @@
         {
           "indexed": false,
           "internalType": "address",
-          "name": "token",
+          "name": "tuna",
           "type": "address"
         },
         {
@@ -41,7 +41,7 @@
           "type": "uint256"
         }
       ],
-      "name": "TokensPurchased",
+      "name": "TunaPurchased",
       "type": "event"
     },
     {
@@ -56,7 +56,7 @@
         {
           "indexed": false,
           "internalType": "address",
-          "name": "token",
+          "name": "tuna",
           "type": "address"
         },
         {
@@ -72,7 +72,7 @@
           "type": "uint256"
         }
       ],
-      "name": "TokensSold",
+      "name": "TunaSold",
       "type": "event"
     },
     {
@@ -108,10 +108,10 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "token",
+      "name": "tuna",
       "outputs": [
         {
-          "internalType": "contract Token",
+          "internalType": "contract Tuna",
           "name": "",
           "type": "address"
         }
@@ -145,17 +145,17 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Token\",\"name\":\"_token\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"rate\",\"type\":\"uint256\"}],\"name\":\"TokensPurchased\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"rate\",\"type\":\"uint256\"}],\"name\":\"TokensSold\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"buyTokens\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"sellTokens\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract Token\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/alexa/eth_swap/src/contracts/EthSwap.sol\":\"EthSwap\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/alexa/eth_swap/src/contracts/EthSwap.sol\":{\"keccak256\":\"0xa8dac1c8633edf958350ab8b5d9dc3313e1fa4f4b5201a682a91c50dfaf8e20b\",\"urls\":[\"bzz-raw://afcde4222c024933558e0b2a301a915dd1fbbed1adc813e9ec8d266a480397ae\",\"dweb:/ipfs/QmczD3Cj1KEyh6x2W8DgRxzux3pNvJoeL6sqaSBeExgSK9\"]},\"/C/Users/alexa/eth_swap/src/contracts/Token.sol\":{\"keccak256\":\"0x057b5ce9f4ad02665fc1ddbf40addf80db7dc928b9a44805063a59d53fe2c88c\",\"urls\":[\"bzz-raw://2fed97d6d366149373bd5fb4c64bd46b0082a5e695244d003735c13f1799b9f7\",\"dweb:/ipfs/QmbtngV54wkdV4jKYqEedfj6wHTsPhU5Np2w8G5N1jvKjC\"]}},\"version\":1}",
-  "bytecode": "0x60806040526040518060400160405280601881526020017f4574685377617020496e7374616e742045786368616e676500000000000000008152506000908051906020019061004f9291906100dc565b50606460025534801561006157600080fd5b50604051610a20380380610a208339818101604052602081101561008457600080fd5b810190808051906020019092919050505080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610181565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061011d57805160ff191683800117855561014b565b8280016001018555821561014b579182015b8281111561014a57825182559160200191906001019061012f565b5b509050610158919061015c565b5090565b61017e91905b8082111561017a576000816000905550600101610162565b5090565b90565b610890806101906000396000f3fe60806040526004361061004a5760003560e01c806306fdde031461004f5780632c4e722e146100df5780636c11bcd31461010a578063d0febe4c14610145578063fc0c546a1461014f575b600080fd5b34801561005b57600080fd5b506100646101a6565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a4578082015181840152602081019050610089565b50505050905090810190601f1680156100d15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100eb57600080fd5b506100f4610244565b6040518082815260200191505060405180910390f35b34801561011657600080fd5b506101436004803603602081101561012d57600080fd5b810190808035906020019092919050505061024a565b005b61014d610593565b005b34801561015b57600080fd5b50610164610835565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561023c5780601f106102115761010080835404028352916020019161023c565b820191906000526020600020905b81548152906001019060200180831161021f57829003601f168201915b505050505081565b60025481565b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156102ea57600080fd5b505afa1580156102fe573d6000803e3d6000fd5b505050506040513d602081101561031457600080fd5b8101908080519060200190929190505050101561033057600080fd5b6000600254828161033d57fe5b049050803073ffffffffffffffffffffffffffffffffffffffff1631101561036457600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd3330856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050602060405180830381600087803b15801561044157600080fd5b505af1158015610455573d6000803e3d6000fd5b505050506040513d602081101561046b57600080fd5b8101908080519060200190929190505050503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501580156104c3573d6000803e3d6000fd5b507f697c42d55a5e1fed3f464ec6f38b32546a0bd368dc8068b065c67566d73f329033600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1684600254604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390a15050565b60006002543402905080600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561063c57600080fd5b505afa158015610650573d6000803e3d6000fd5b505050506040513d602081101561066657600080fd5b8101908080519060200190929190505050101561068257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561072b57600080fd5b505af115801561073f573d6000803e3d6000fd5b505050506040513d602081101561075557600080fd5b8101908080519060200190929190505050507f6faf93231a456e552dbc9961f58d9713ee4f2e69d15f1975b050ef0911053a7b33600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1683600254604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390a150565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a7231582033bb5a53827b5b83a60aaf256c1756cf751d45f9eb8b38781029d960453a4a0664736f6c63430005100032",
-  "deployedBytecode": "0x60806040526004361061004a5760003560e01c806306fdde031461004f5780632c4e722e146100df5780636c11bcd31461010a578063d0febe4c14610145578063fc0c546a1461014f575b600080fd5b34801561005b57600080fd5b506100646101a6565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a4578082015181840152602081019050610089565b50505050905090810190601f1680156100d15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100eb57600080fd5b506100f4610244565b6040518082815260200191505060405180910390f35b34801561011657600080fd5b506101436004803603602081101561012d57600080fd5b810190808035906020019092919050505061024a565b005b61014d610593565b005b34801561015b57600080fd5b50610164610835565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561023c5780601f106102115761010080835404028352916020019161023c565b820191906000526020600020905b81548152906001019060200180831161021f57829003601f168201915b505050505081565b60025481565b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156102ea57600080fd5b505afa1580156102fe573d6000803e3d6000fd5b505050506040513d602081101561031457600080fd5b8101908080519060200190929190505050101561033057600080fd5b6000600254828161033d57fe5b049050803073ffffffffffffffffffffffffffffffffffffffff1631101561036457600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd3330856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050602060405180830381600087803b15801561044157600080fd5b505af1158015610455573d6000803e3d6000fd5b505050506040513d602081101561046b57600080fd5b8101908080519060200190929190505050503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501580156104c3573d6000803e3d6000fd5b507f697c42d55a5e1fed3f464ec6f38b32546a0bd368dc8068b065c67566d73f329033600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1684600254604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390a15050565b60006002543402905080600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561063c57600080fd5b505afa158015610650573d6000803e3d6000fd5b505050506040513d602081101561066657600080fd5b8101908080519060200190929190505050101561068257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561072b57600080fd5b505af115801561073f573d6000803e3d6000fd5b505050506040513d602081101561075557600080fd5b8101908080519060200190929190505050507f6faf93231a456e552dbc9961f58d9713ee4f2e69d15f1975b050ef0911053a7b33600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1683600254604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390a150565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a7231582033bb5a53827b5b83a60aaf256c1756cf751d45f9eb8b38781029d960453a4a0664736f6c63430005100032",
-  "sourceMap": "52:1321:0:-;;;73:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;165:3;146:22;;369:57;8:9:-1;5:2;;;30:1;27;20:12;5:2;369:57:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;369:57:0;;;;;;;;;;;;;;;;415:6;407:5;;:14;;;;;;;;;;;;;;;;;;369:57;52:1321;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "52:1321:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;73:47;;8:9:-1;5:2;;;30:1;27;20:12;5:2;73:47:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;73:47:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;146:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;146:22:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;810:552;;8:9:-1;5:2;;;30:1;27;20:12;5:2;810:552:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;810:552:0;;;;;;;;;;;;;;;;;:::i;:::-;;431:374;;;:::i;:::-;;124:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;124:18:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;73:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;146:22::-;;;;:::o;810:552::-;942:7;911:5;;;;;;;;;;;:15;;;927:10;911:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;911:27:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;911:27:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;911:27:0;;;;;;;;;;;;;;;;:38;;903:48;;;;;;1004:16;1033:4;;1023:7;:14;;;;;;1004:33;;1141:11;1124:4;1116:21;;;:36;;1108:45;;;;;;1160:5;;;;;;;;;;;:18;;;1179:10;1199:4;1206:7;1160:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1160:54:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1160:54:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1160:54:0;;;;;;;;;;;;;;;;;1239:10;:19;;:32;1259:11;1239:32;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1239:32:0;1302:53;1313:10;1333:5;;;;;;;;;;;1341:7;1350:4;;1302:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;810:552;;:::o;431:374::-;503:16;534:4;;522:9;:16;503:35;;649:11;615:5;;;;;;;;;;;:15;;;639:4;615:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;615:30:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;615:30:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;615:30:0;;;;;;;;;;;;;;;;:45;;607:54;;;;;;668:5;;;;;;;;;;;:14;;;683:10;695:11;668:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;668:39:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;668:39:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;668:39:0;;;;;;;;;;;;;;;;;738:62;754:10;774:5;;;;;;;;;;;782:11;795:4;;738:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;431:374;:::o;124:18::-;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\r\n\r\nimport \"./Token.sol\";\r\n\r\ncontract EthSwap {\r\n\tstring public name = \"EthSwap Instant Exchange\";\r\n\tToken public token;\r\n\tuint public rate = 100;\r\n\r\n\tevent TokensPurchased(\r\n\t\taddress account,\r\n\t\taddress token,\r\n\t\tuint amount,\r\n\t\tuint rate\r\n\t\t);\r\n\r\n\tevent TokensSold(\r\n\t\taddress account,\r\n\t\taddress token,\r\n\t\tuint amount,\r\n\t\tuint rate\r\n\t\t);\r\n\r\n\tconstructor(Token _token) public {\r\n\t\ttoken = _token;\r\n\t}\r\n\r\n\tfunction buyTokens() public  payable {\r\n\t\t// number of tokens to buy\r\n\t\tuint tokenAmount = msg.value * rate;\r\n\t\t// verify that the exchange smart contract has enough tokens\r\n\t\trequire(token.balanceOf(address(this)) >= tokenAmount);\r\n\r\n\t\ttoken.transfer(msg.sender, tokenAmount);\r\n\r\n\t\t//emit an event\r\n\t\temit TokensPurchased(msg.sender, address(token), tokenAmount, rate);\r\n\t}\r\n\r\n\tfunction sellTokens(uint _amount) public {\r\n\r\n\t\t//User can't sell more token than he have\r\n\t\trequire(token.balanceOf(msg.sender) >= _amount );\r\n\r\n\t\t\r\n\t\t//calculate amount the amount of ether\r\n\t\tuint etherAmount = _amount / rate;\r\n\r\n\t\t// verify that the exchange smart contract has enough tokens\r\n\t\trequire(address(this).balance >= etherAmount);\r\n\r\n\t\ttoken.transferFrom(msg.sender, address(this), _amount);\r\n\t\t// Performs sell\r\n\t\tmsg.sender.transfer(etherAmount);\r\n\r\n\t\t//emit an event\r\n\t\temit TokensSold(msg.sender, address(token), _amount, rate);\r\n\r\n\t}\r\n\r\n\r\n\r\n\r\n}",
-  "sourcePath": "C:\\Users\\alexa\\eth_swap\\src\\contracts\\EthSwap.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Tuna\",\"name\":\"_tuna\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"tuna\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"rate\",\"type\":\"uint256\"}],\"name\":\"TunaPurchased\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"tuna\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"rate\",\"type\":\"uint256\"}],\"name\":\"TunaSold\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"buyTokens\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"sellTokens\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tuna\",\"outputs\":[{\"internalType\":\"contract Tuna\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/alexa/eth_swap/src/contracts/FishySwap.sol\":\"FishySwap\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/alexa/eth_swap/src/contracts/FishySwap.sol\":{\"keccak256\":\"0xca7a27e1bb2061f561bb7d8ae7be9edef249a77674d8048334036af5ce0e20cf\",\"urls\":[\"bzz-raw://8456bda8ae27996bf66da1906265cd7e36ed2ec715cf8000e68b0738371d91d8\",\"dweb:/ipfs/QmUcgnDyUTBv2dJ4mtaevq5LDFRwLrfbnHFkpwtTvSTFPt\"]},\"/C/Users/alexa/eth_swap/src/contracts/Tuna.sol\":{\"keccak256\":\"0xfceb20b68fcce8016449dd7c357fc94a1b4e6b873d95bcb709b1b8229c74a7ac\",\"urls\":[\"bzz-raw://11c4042c221ee6d13a73dd58b7a388f2937d89fd84bb52e1cb3dc19ee99a575b\",\"dweb:/ipfs/QmW4aojtLugZQdoQSb5zDqRmbfajjKpHRt2w2gRSaaZNk5\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040518060400160405280601a81526020017f46697368795377617020496e7374616e742045786368616e67650000000000008152506000908051906020019061004f9291906100dc565b50606460025534801561006157600080fd5b50604051610a20380380610a208339818101604052602081101561008457600080fd5b810190808051906020019092919050505080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610181565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061011d57805160ff191683800117855561014b565b8280016001018555821561014b579182015b8281111561014a57825182559160200191906001019061012f565b5b509050610158919061015c565b5090565b61017e91905b8082111561017a576000816000905550600101610162565b5090565b90565b610890806101906000396000f3fe60806040526004361061004a5760003560e01c806306fdde031461004f57806310bca5a0146100df5780632c4e722e146101365780636c11bcd314610161578063d0febe4c1461019c575b600080fd5b34801561005b57600080fd5b506100646101a6565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a4578082015181840152602081019050610089565b50505050905090810190601f1680156100d15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100eb57600080fd5b506100f4610244565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014257600080fd5b5061014b61026a565b6040518082815260200191505060405180910390f35b34801561016d57600080fd5b5061019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610270565b005b6101a46105b9565b005b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561023c5780601f106102115761010080835404028352916020019161023c565b820191906000526020600020905b81548152906001019060200180831161021f57829003601f168201915b505050505081565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561031057600080fd5b505afa158015610324573d6000803e3d6000fd5b505050506040513d602081101561033a57600080fd5b8101908080519060200190929190505050101561035657600080fd5b6000600254828161036357fe5b049050803073ffffffffffffffffffffffffffffffffffffffff1631101561038a57600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd3330856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050602060405180830381600087803b15801561046757600080fd5b505af115801561047b573d6000803e3d6000fd5b505050506040513d602081101561049157600080fd5b8101908080519060200190929190505050503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501580156104e9573d6000803e3d6000fd5b507f8f3b57cc2b026ca3fa2c8e412f024100c4b39b94f9260408ba44f983abb2f3b833600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1684600254604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390a15050565b60006002543402905080600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561066257600080fd5b505afa158015610676573d6000803e3d6000fd5b505050506040513d602081101561068c57600080fd5b810190808051906020019092919050505010156106a857600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561075157600080fd5b505af1158015610765573d6000803e3d6000fd5b505050506040513d602081101561077b57600080fd5b8101908080519060200190929190505050507f6250366905ceab11a0d8aa692ff750b5024136148641ad569c7a507b3d45a69233600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1683600254604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390a15056fea265627a7a72315820a50193aa3fad33dcf354a9b324750729a647eab62de951ac0123c0379a19e95864736f6c63430005100032",
+  "deployedBytecode": "0x60806040526004361061004a5760003560e01c806306fdde031461004f57806310bca5a0146100df5780632c4e722e146101365780636c11bcd314610161578063d0febe4c1461019c575b600080fd5b34801561005b57600080fd5b506100646101a6565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a4578082015181840152602081019050610089565b50505050905090810190601f1680156100d15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100eb57600080fd5b506100f4610244565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014257600080fd5b5061014b61026a565b6040518082815260200191505060405180910390f35b34801561016d57600080fd5b5061019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610270565b005b6101a46105b9565b005b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561023c5780601f106102115761010080835404028352916020019161023c565b820191906000526020600020905b81548152906001019060200180831161021f57829003601f168201915b505050505081565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561031057600080fd5b505afa158015610324573d6000803e3d6000fd5b505050506040513d602081101561033a57600080fd5b8101908080519060200190929190505050101561035657600080fd5b6000600254828161036357fe5b049050803073ffffffffffffffffffffffffffffffffffffffff1631101561038a57600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd3330856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050602060405180830381600087803b15801561046757600080fd5b505af115801561047b573d6000803e3d6000fd5b505050506040513d602081101561049157600080fd5b8101908080519060200190929190505050503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501580156104e9573d6000803e3d6000fd5b507f8f3b57cc2b026ca3fa2c8e412f024100c4b39b94f9260408ba44f983abb2f3b833600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1684600254604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390a15050565b60006002543402905080600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561066257600080fd5b505afa158015610676573d6000803e3d6000fd5b505050506040513d602081101561068c57600080fd5b810190808051906020019092919050505010156106a857600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561075157600080fd5b505af1158015610765573d6000803e3d6000fd5b505050506040513d602081101561077b57600080fd5b8101908080519060200190929190505050507f6250366905ceab11a0d8aa692ff750b5024136148641ad569c7a507b3d45a69233600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1683600254604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390a15056fea265627a7a72315820a50193aa3fad33dcf354a9b324750729a647eab62de951ac0123c0379a19e95864736f6c63430005100032",
+  "sourceMap": "51:1299:0:-;;;74:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;166:3;147:22;;364:53;8:9:-1;5:2;;;30:1;27;20:12;5:2;364:53:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;364:53:0;;;;;;;;;;;;;;;;407:5;400:4;;:12;;;;;;;;;;;;;;;;;;364:53;51:1299;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "51:1299:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;74:49;;8:9:-1;5:2;;;30:1;27;20:12;5:2;74:49:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;74:49:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;127:16;;8:9:-1;5:2;;;30:1;27;20:12;5:2;127:16:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;147:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;147:22:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;792:547;;8:9:-1;5:2;;;30:1;27;20:12;5:2;792:547:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;792:547:0;;;;;;;;;;;;;;;;;:::i;:::-;;422:365;;;:::i;:::-;;74:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;127:16::-;;;;;;;;;;;;;:::o;147:22::-;;;;:::o;792:547::-;923:7;893:4;;;;;;;;;;;:14;;;908:10;893:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;893:26:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;893:26:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;893:26:0;;;;;;;;;;;;;;;;:37;;885:47;;;;;;985:16;1014:4;;1004:7;:14;;;;;;985:33;;1122:11;1105:4;1097:21;;;:36;;1089:45;;;;;;1141:4;;;;;;;;;;;:17;;;1159:10;1179:4;1186:7;1141:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1141:53:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1141:53:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1141:53:0;;;;;;;;;;;;;;;;;1219:10;:19;;:32;1239:11;1219:32;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1219:32:0;1282:50;1291:10;1311:4;;;;;;;;;;;1318:7;1327:4;;1282:50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;792:547;;:::o;422:365::-;494:15;524:4;;512:9;:16;494:34;;638:10;605:4;;;;;;;;;;;:14;;;628:4;605:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;605:29:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;605:29:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;605:29:0;;;;;;;;;;;;;;;;:43;;597:52;;;;;;656:4;;;;;;;;;;;:13;;;670:10;682;656:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;656:37:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;656:37:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;656:37:0;;;;;;;;;;;;;;;;;724:58;738:10;758:4;;;;;;;;;;;765:10;777:4;;724:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;422:365;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\nimport \"./Tuna.sol\";\r\n\r\ncontract FishySwap {\r\n\tstring public name = \"FishySwap Instant Exchange\";\r\n\tTuna public tuna;\r\n\tuint public rate = 100;\r\n\r\n\tevent TunaPurchased(\r\n\t\taddress account,\r\n\t\taddress tuna,\r\n\t\tuint amount,\r\n\t\tuint rate\r\n\t\t);\r\n\r\n\tevent TunaSold(\r\n\t\taddress account,\r\n\t\taddress tuna,\r\n\t\tuint amount,\r\n\t\tuint rate\r\n\t\t);\r\n\r\n\tconstructor(Tuna _tuna) public {\r\n\t\ttuna = _tuna;\r\n\t}\r\n\r\n\tfunction buyTokens() public  payable {\r\n\t\t// number of tokens to buy\r\n\t\tuint tunaAmount = msg.value * rate;\r\n\t\t// verify that the exchange smart contract has enough tokens\r\n\t\trequire(tuna.balanceOf(address(this)) >= tunaAmount);\r\n\r\n\t\ttuna.transfer(msg.sender, tunaAmount);\r\n\r\n\t\t//emit an event\r\n\t\temit TunaPurchased(msg.sender, address(tuna), tunaAmount, rate);\r\n\t}\r\n\r\n\tfunction sellTokens(uint _amount) public {\r\n\r\n\t\t//User can't sell more token than he have\r\n\t\trequire(tuna.balanceOf(msg.sender) >= _amount );\r\n\r\n\t\t\r\n\t\t//calculate amount the amount of ether\r\n\t\tuint etherAmount = _amount / rate;\r\n\r\n\t\t// verify that the exchange smart contract has enough tokens\r\n\t\trequire(address(this).balance >= etherAmount);\r\n\r\n\t\ttuna.transferFrom(msg.sender, address(this), _amount);\r\n\t\t// Performs sell\r\n\t\tmsg.sender.transfer(etherAmount);\r\n\r\n\t\t//emit an event\r\n\t\temit TunaSold(msg.sender, address(tuna), _amount, rate);\r\n\r\n\t}\r\n\r\n\r\n\r\n\r\n}",
+  "sourcePath": "C:\\Users\\alexa\\eth_swap\\src\\contracts\\FishySwap.sol",
   "ast": {
-    "absolutePath": "/C/Users/alexa/eth_swap/src/contracts/EthSwap.sol",
+    "absolutePath": "/C/Users/alexa/eth_swap/src/contracts/FishySwap.sol",
     "exportedSymbols": {
-      "EthSwap": [
+      "FishySwap": [
         141
       ]
     },
@@ -174,13 +174,13 @@
         "src": "0:23:0"
       },
       {
-        "absolutePath": "/C/Users/alexa/eth_swap/src/contracts/Token.sol",
-        "file": "./Token.sol",
+        "absolutePath": "/C/Users/alexa/eth_swap/src/contracts/Tuna.sol",
+        "file": "./Tuna.sol",
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 142,
         "sourceUnit": 380,
-        "src": "27:21:0",
+        "src": "27:20:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -194,7 +194,7 @@
         "linearizedBaseContracts": [
           141
         ],
-        "name": "EthSwap",
+        "name": "FishySwap",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -203,7 +203,7 @@
             "name": "name",
             "nodeType": "VariableDeclaration",
             "scope": 141,
-            "src": "73:47:0",
+            "src": "74:49:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -214,7 +214,7 @@
               "id": 3,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "73:6:0",
+              "src": "74:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -222,7 +222,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "hexValue": "4574685377617020496e7374616e742045786368616e6765",
+              "hexValue": "46697368795377617020496e7374616e742045786368616e6765",
               "id": 4,
               "isConstant": false,
               "isLValue": false,
@@ -230,39 +230,39 @@
               "kind": "string",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "94:26:0",
+              "src": "95:28:0",
               "subdenomination": null,
               "typeDescriptions": {
-                "typeIdentifier": "t_stringliteral_0cd767832a4b45e13c98bb05545343ab53826a9ea9075205b12bb04a1062f40e",
-                "typeString": "literal_string \"EthSwap Instant Exchange\""
+                "typeIdentifier": "t_stringliteral_ce42964a6346370f15b0094b099d2e6b291498c503bcf7894f231c63542ed3a6",
+                "typeString": "literal_string \"FishySwap Instant Exchange\""
               },
-              "value": "EthSwap Instant Exchange"
+              "value": "FishySwap Instant Exchange"
             },
             "visibility": "public"
           },
           {
             "constant": false,
             "id": 7,
-            "name": "token",
+            "name": "tuna",
             "nodeType": "VariableDeclaration",
             "scope": 141,
-            "src": "124:18:0",
+            "src": "127:16:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Token_$379",
-              "typeString": "contract Token"
+              "typeIdentifier": "t_contract$_Tuna_$379",
+              "typeString": "contract Tuna"
             },
             "typeName": {
               "contractScope": null,
               "id": 6,
-              "name": "Token",
+              "name": "Tuna",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 379,
-              "src": "124:5:0",
+              "src": "127:4:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Token_$379",
-                "typeString": "contract Token"
+                "typeIdentifier": "t_contract$_Tuna_$379",
+                "typeString": "contract Tuna"
               }
             },
             "value": null,
@@ -274,7 +274,7 @@
             "name": "rate",
             "nodeType": "VariableDeclaration",
             "scope": 141,
-            "src": "146:22:0",
+            "src": "147:22:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -285,7 +285,7 @@
               "id": 8,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "146:4:0",
+              "src": "147:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -301,7 +301,7 @@
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "165:3:0",
+              "src": "166:3:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_100_by_1",
@@ -315,7 +315,7 @@
             "anonymous": false,
             "documentation": null,
             "id": 20,
-            "name": "TokensPurchased",
+            "name": "TunaPurchased",
             "nodeType": "EventDefinition",
             "parameters": {
               "id": 19,
@@ -328,7 +328,7 @@
                   "name": "account",
                   "nodeType": "VariableDeclaration",
                   "scope": 20,
-                  "src": "200:15:0",
+                  "src": "199:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -339,7 +339,7 @@
                     "id": 11,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "200:7:0",
+                    "src": "199:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -353,10 +353,10 @@
                   "constant": false,
                   "id": 14,
                   "indexed": false,
-                  "name": "token",
+                  "name": "tuna",
                   "nodeType": "VariableDeclaration",
                   "scope": 20,
-                  "src": "220:13:0",
+                  "src": "219:12:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -367,7 +367,7 @@
                     "id": 13,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "220:7:0",
+                    "src": "219:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -384,7 +384,7 @@
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "scope": 20,
-                  "src": "238:11:0",
+                  "src": "236:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -395,7 +395,7 @@
                     "id": 15,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "238:4:0",
+                    "src": "236:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -411,7 +411,7 @@
                   "name": "rate",
                   "nodeType": "VariableDeclaration",
                   "scope": 20,
-                  "src": "254:9:0",
+                  "src": "252:9:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -422,7 +422,7 @@
                     "id": 17,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "254:4:0",
+                    "src": "252:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -432,15 +432,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "195:73:0"
+              "src": "194:72:0"
             },
-            "src": "174:95:0"
+            "src": "175:92:0"
           },
           {
             "anonymous": false,
             "documentation": null,
             "id": 30,
-            "name": "TokensSold",
+            "name": "TunaSold",
             "nodeType": "EventDefinition",
             "parameters": {
               "id": 29,
@@ -453,7 +453,7 @@
                   "name": "account",
                   "nodeType": "VariableDeclaration",
                   "scope": 30,
-                  "src": "295:15:0",
+                  "src": "291:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -464,7 +464,7 @@
                     "id": 21,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "295:7:0",
+                    "src": "291:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -478,10 +478,10 @@
                   "constant": false,
                   "id": 24,
                   "indexed": false,
-                  "name": "token",
+                  "name": "tuna",
                   "nodeType": "VariableDeclaration",
                   "scope": 30,
-                  "src": "315:13:0",
+                  "src": "311:12:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -492,7 +492,7 @@
                     "id": 23,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "315:7:0",
+                    "src": "311:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -509,7 +509,7 @@
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "scope": 30,
-                  "src": "333:11:0",
+                  "src": "328:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -520,7 +520,7 @@
                     "id": 25,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "333:4:0",
+                    "src": "328:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -536,7 +536,7 @@
                   "name": "rate",
                   "nodeType": "VariableDeclaration",
                   "scope": 30,
-                  "src": "349:9:0",
+                  "src": "344:9:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -547,7 +547,7 @@
                     "id": 27,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "349:4:0",
+                    "src": "344:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -557,15 +557,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "290:73:0"
+              "src": "286:72:0"
             },
-            "src": "274:90:0"
+            "src": "272:87:0"
           },
           {
             "body": {
               "id": 39,
               "nodeType": "Block",
-              "src": "402:24:0",
+              "src": "395:22:0",
               "statements": [
                 {
                   "expression": {
@@ -578,14 +578,14 @@
                     "leftHandSide": {
                       "argumentTypes": null,
                       "id": 35,
-                      "name": "token",
+                      "name": "tuna",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 7,
-                      "src": "407:5:0",
+                      "src": "400:4:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Token_$379",
-                        "typeString": "contract Token"
+                        "typeIdentifier": "t_contract$_Tuna_$379",
+                        "typeString": "contract Tuna"
                       }
                     },
                     "nodeType": "Assignment",
@@ -593,25 +593,25 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "id": 36,
-                      "name": "_token",
+                      "name": "_tuna",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 32,
-                      "src": "415:6:0",
+                      "src": "407:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Token_$379",
-                        "typeString": "contract Token"
+                        "typeIdentifier": "t_contract$_Tuna_$379",
+                        "typeString": "contract Tuna"
                       }
                     },
-                    "src": "407:14:0",
+                    "src": "400:12:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Token_$379",
-                      "typeString": "contract Token"
+                      "typeIdentifier": "t_contract$_Tuna_$379",
+                      "typeString": "contract Tuna"
                     }
                   },
                   "id": 38,
                   "nodeType": "ExpressionStatement",
-                  "src": "407:14:0"
+                  "src": "400:12:0"
                 }
               ]
             },
@@ -629,42 +629,42 @@
                 {
                   "constant": false,
                   "id": 32,
-                  "name": "_token",
+                  "name": "_tuna",
                   "nodeType": "VariableDeclaration",
                   "scope": 40,
-                  "src": "381:12:0",
+                  "src": "376:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_Token_$379",
-                    "typeString": "contract Token"
+                    "typeIdentifier": "t_contract$_Tuna_$379",
+                    "typeString": "contract Tuna"
                   },
                   "typeName": {
                     "contractScope": null,
                     "id": 31,
-                    "name": "Token",
+                    "name": "Tuna",
                     "nodeType": "UserDefinedTypeName",
                     "referencedDeclaration": 379,
-                    "src": "381:5:0",
+                    "src": "376:4:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Token_$379",
-                      "typeString": "contract Token"
+                      "typeIdentifier": "t_contract$_Tuna_$379",
+                      "typeString": "contract Tuna"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "380:14:0"
+              "src": "375:12:0"
             },
             "returnParameters": {
               "id": 34,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "402:0:0"
+              "src": "395:0:0"
             },
             "scope": 141,
-            "src": "369:57:0",
+            "src": "364:53:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -673,7 +673,7 @@
             "body": {
               "id": 79,
               "nodeType": "Block",
-              "src": "468:337:0",
+              "src": "459:328:0",
               "statements": [
                 {
                   "assignments": [
@@ -683,10 +683,10 @@
                     {
                       "constant": false,
                       "id": 44,
-                      "name": "tokenAmount",
+                      "name": "tunaAmount",
                       "nodeType": "VariableDeclaration",
                       "scope": 79,
-                      "src": "503:16:0",
+                      "src": "494:15:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -697,7 +697,7 @@
                         "id": 43,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "503:4:0",
+                        "src": "494:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -728,7 +728,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 394,
-                        "src": "522:3:0",
+                        "src": "512:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
@@ -742,7 +742,7 @@
                       "memberName": "value",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "522:9:0",
+                      "src": "512:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -757,20 +757,20 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 10,
-                      "src": "534:4:0",
+                      "src": "524:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "522:16:0",
+                    "src": "512:16:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "503:35:0"
+                  "src": "494:34:0"
                 },
                 {
                   "expression": {
@@ -800,18 +800,18 @@
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
                                   "referencedDeclaration": 410,
-                                  "src": "639:4:0",
+                                  "src": "628:4:0",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_EthSwap_$141",
-                                    "typeString": "contract EthSwap"
+                                    "typeIdentifier": "t_contract$_FishySwap_$141",
+                                    "typeString": "contract FishySwap"
                                   }
                                 }
                               ],
                               "expression": {
                                 "argumentTypes": [
                                   {
-                                    "typeIdentifier": "t_contract$_EthSwap_$141",
-                                    "typeString": "contract EthSwap"
+                                    "typeIdentifier": "t_contract$_FishySwap_$141",
+                                    "typeString": "contract FishySwap"
                                   }
                                 ],
                                 "id": 53,
@@ -820,7 +820,7 @@
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "ElementaryTypeNameExpression",
-                                "src": "631:7:0",
+                                "src": "620:7:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_address_$",
                                   "typeString": "type(address)"
@@ -835,7 +835,7 @@
                               "lValueRequested": false,
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "631:13:0",
+                              "src": "620:13:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -852,14 +852,14 @@
                             "expression": {
                               "argumentTypes": null,
                               "id": 51,
-                              "name": "token",
+                              "name": "tuna",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 7,
-                              "src": "615:5:0",
+                              "src": "605:4:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Token_$379",
-                                "typeString": "contract Token"
+                                "typeIdentifier": "t_contract$_Tuna_$379",
+                                "typeString": "contract Tuna"
                               }
                             },
                             "id": 52,
@@ -870,7 +870,7 @@
                             "memberName": "balanceOf",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 232,
-                            "src": "615:15:0",
+                            "src": "605:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
                               "typeString": "function (address) view external returns (uint256)"
@@ -884,7 +884,7 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "615:30:0",
+                          "src": "605:29:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -895,17 +895,17 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "id": 57,
-                          "name": "tokenAmount",
+                          "name": "tunaAmount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 44,
-                          "src": "649:11:0",
+                          "src": "638:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "615:45:0",
+                        "src": "605:43:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -927,7 +927,7 @@
                         398
                       ],
                       "referencedDeclaration": 397,
-                      "src": "607:7:0",
+                      "src": "597:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
@@ -941,7 +941,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "607:54:0",
+                    "src": "597:52:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -949,7 +949,7 @@
                   },
                   "id": 60,
                   "nodeType": "ExpressionStatement",
-                  "src": "607:54:0"
+                  "src": "597:52:0"
                 },
                 {
                   "expression": {
@@ -964,7 +964,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "683:3:0",
+                          "src": "670:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -978,7 +978,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "683:10:0",
+                        "src": "670:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -987,11 +987,11 @@
                       {
                         "argumentTypes": null,
                         "id": 66,
-                        "name": "tokenAmount",
+                        "name": "tunaAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 44,
-                        "src": "695:11:0",
+                        "src": "682:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1012,14 +1012,14 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 61,
-                        "name": "token",
+                        "name": "tuna",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 7,
-                        "src": "668:5:0",
+                        "src": "656:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Token_$379",
-                          "typeString": "contract Token"
+                          "typeIdentifier": "t_contract$_Tuna_$379",
+                          "typeString": "contract Tuna"
                         }
                       },
                       "id": 63,
@@ -1030,7 +1030,7 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 290,
-                      "src": "668:14:0",
+                      "src": "656:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (address,uint256) external returns (bool)"
@@ -1044,7 +1044,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "668:39:0",
+                    "src": "656:37:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1052,7 +1052,7 @@
                   },
                   "id": 68,
                   "nodeType": "ExpressionStatement",
-                  "src": "668:39:0"
+                  "src": "656:37:0"
                 },
                 {
                   "eventCall": {
@@ -1067,7 +1067,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "754:3:0",
+                          "src": "738:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -1081,7 +1081,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "754:10:0",
+                        "src": "738:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1093,22 +1093,22 @@
                           {
                             "argumentTypes": null,
                             "id": 73,
-                            "name": "token",
+                            "name": "tuna",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 7,
-                            "src": "774:5:0",
+                            "src": "758:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Token_$379",
-                              "typeString": "contract Token"
+                              "typeIdentifier": "t_contract$_Tuna_$379",
+                              "typeString": "contract Tuna"
                             }
                           }
                         ],
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Token_$379",
-                              "typeString": "contract Token"
+                              "typeIdentifier": "t_contract$_Tuna_$379",
+                              "typeString": "contract Tuna"
                             }
                           ],
                           "id": 72,
@@ -1117,7 +1117,7 @@
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "766:7:0",
+                          "src": "750:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
@@ -1132,7 +1132,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "766:14:0",
+                        "src": "750:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1141,11 +1141,11 @@
                       {
                         "argumentTypes": null,
                         "id": 75,
-                        "name": "tokenAmount",
+                        "name": "tunaAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 44,
-                        "src": "782:11:0",
+                        "src": "765:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1158,7 +1158,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 10,
-                        "src": "795:4:0",
+                        "src": "777:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1185,11 +1185,11 @@
                         }
                       ],
                       "id": 69,
-                      "name": "TokensPurchased",
+                      "name": "TunaPurchased",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 20,
-                      "src": "738:15:0",
+                      "src": "724:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256,uint256)"
@@ -1203,7 +1203,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "738:62:0",
+                    "src": "724:58:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -1211,7 +1211,7 @@
                   },
                   "id": 78,
                   "nodeType": "EmitStatement",
-                  "src": "733:67:0"
+                  "src": "719:63:0"
                 }
               ]
             },
@@ -1226,16 +1226,16 @@
               "id": 41,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "449:2:0"
+              "src": "440:2:0"
             },
             "returnParameters": {
               "id": 42,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "468:0:0"
+              "src": "459:0:0"
             },
             "scope": 141,
-            "src": "431:374:0",
+            "src": "422:365:0",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
@@ -1244,7 +1244,7 @@
             "body": {
               "id": 139,
               "nodeType": "Block",
-              "src": "851:511:0",
+              "src": "833:506:0",
               "statements": [
                 {
                   "expression": {
@@ -1273,7 +1273,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 394,
-                                "src": "927:3:0",
+                                "src": "908:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
@@ -1287,7 +1287,7 @@
                               "memberName": "sender",
                               "nodeType": "MemberAccess",
                               "referencedDeclaration": null,
-                              "src": "927:10:0",
+                              "src": "908:10:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address_payable",
                                 "typeString": "address payable"
@@ -1304,14 +1304,14 @@
                             "expression": {
                               "argumentTypes": null,
                               "id": 86,
-                              "name": "token",
+                              "name": "tuna",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 7,
-                              "src": "911:5:0",
+                              "src": "893:4:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Token_$379",
-                                "typeString": "contract Token"
+                                "typeIdentifier": "t_contract$_Tuna_$379",
+                                "typeString": "contract Tuna"
                               }
                             },
                             "id": 87,
@@ -1322,7 +1322,7 @@
                             "memberName": "balanceOf",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 232,
-                            "src": "911:15:0",
+                            "src": "893:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
                               "typeString": "function (address) view external returns (uint256)"
@@ -1336,7 +1336,7 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "911:27:0",
+                          "src": "893:26:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1351,13 +1351,13 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 82,
-                          "src": "942:7:0",
+                          "src": "923:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "911:38:0",
+                        "src": "893:37:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1379,7 +1379,7 @@
                         398
                       ],
                       "referencedDeclaration": 397,
-                      "src": "903:7:0",
+                      "src": "885:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
@@ -1393,7 +1393,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "903:48:0",
+                    "src": "885:47:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -1401,7 +1401,7 @@
                   },
                   "id": 94,
                   "nodeType": "ExpressionStatement",
-                  "src": "903:48:0"
+                  "src": "885:47:0"
                 },
                 {
                   "assignments": [
@@ -1414,7 +1414,7 @@
                       "name": "etherAmount",
                       "nodeType": "VariableDeclaration",
                       "scope": 139,
-                      "src": "1004:16:0",
+                      "src": "985:16:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1425,7 +1425,7 @@
                         "id": 95,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "1004:4:0",
+                        "src": "985:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1454,7 +1454,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 82,
-                      "src": "1023:7:0",
+                      "src": "1004:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1469,20 +1469,20 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 10,
-                      "src": "1033:4:0",
+                      "src": "1014:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1023:14:0",
+                    "src": "1004:14:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "1004:33:0"
+                  "src": "985:33:0"
                 },
                 {
                   "expression": {
@@ -1511,18 +1511,18 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 410,
-                                "src": "1124:4:0",
+                                "src": "1105:4:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_EthSwap_$141",
-                                  "typeString": "contract EthSwap"
+                                  "typeIdentifier": "t_contract$_FishySwap_$141",
+                                  "typeString": "contract FishySwap"
                                 }
                               }
                             ],
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_EthSwap_$141",
-                                  "typeString": "contract EthSwap"
+                                  "typeIdentifier": "t_contract$_FishySwap_$141",
+                                  "typeString": "contract FishySwap"
                                 }
                               ],
                               "id": 102,
@@ -1531,7 +1531,7 @@
                               "isPure": true,
                               "lValueRequested": false,
                               "nodeType": "ElementaryTypeNameExpression",
-                              "src": "1116:7:0",
+                              "src": "1097:7:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_type$_t_address_$",
                                 "typeString": "type(address)"
@@ -1546,7 +1546,7 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "1116:13:0",
+                            "src": "1097:13:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -1560,7 +1560,7 @@
                           "memberName": "balance",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "1116:21:0",
+                          "src": "1097:21:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1575,13 +1575,13 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 96,
-                          "src": "1141:11:0",
+                          "src": "1122:11:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "1116:36:0",
+                        "src": "1097:36:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1603,7 +1603,7 @@
                         398
                       ],
                       "referencedDeclaration": 397,
-                      "src": "1108:7:0",
+                      "src": "1089:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
@@ -1617,7 +1617,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1108:45:0",
+                    "src": "1089:45:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -1625,7 +1625,7 @@
                   },
                   "id": 109,
                   "nodeType": "ExpressionStatement",
-                  "src": "1108:45:0"
+                  "src": "1089:45:0"
                 },
                 {
                   "expression": {
@@ -1640,7 +1640,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "1179:3:0",
+                          "src": "1159:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -1654,7 +1654,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "1179:10:0",
+                        "src": "1159:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1670,18 +1670,18 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 410,
-                            "src": "1199:4:0",
+                            "src": "1179:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_EthSwap_$141",
-                              "typeString": "contract EthSwap"
+                              "typeIdentifier": "t_contract$_FishySwap_$141",
+                              "typeString": "contract FishySwap"
                             }
                           }
                         ],
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_EthSwap_$141",
-                              "typeString": "contract EthSwap"
+                              "typeIdentifier": "t_contract$_FishySwap_$141",
+                              "typeString": "contract FishySwap"
                             }
                           ],
                           "id": 115,
@@ -1690,7 +1690,7 @@
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "1191:7:0",
+                          "src": "1171:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
@@ -1705,7 +1705,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1191:13:0",
+                        "src": "1171:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1718,7 +1718,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 82,
-                        "src": "1206:7:0",
+                        "src": "1186:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1743,14 +1743,14 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 110,
-                        "name": "token",
+                        "name": "tuna",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 7,
-                        "src": "1160:5:0",
+                        "src": "1141:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Token_$379",
-                          "typeString": "contract Token"
+                          "typeIdentifier": "t_contract$_Tuna_$379",
+                          "typeString": "contract Tuna"
                         }
                       },
                       "id": 112,
@@ -1761,7 +1761,7 @@
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 378,
-                      "src": "1160:18:0",
+                      "src": "1141:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (address,address,uint256) external returns (bool)"
@@ -1775,7 +1775,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1160:54:0",
+                    "src": "1141:53:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1783,7 +1783,7 @@
                   },
                   "id": 120,
                   "nodeType": "ExpressionStatement",
-                  "src": "1160:54:0"
+                  "src": "1141:53:0"
                 },
                 {
                   "expression": {
@@ -1796,7 +1796,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 96,
-                        "src": "1259:11:0",
+                        "src": "1239:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1819,7 +1819,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "1239:3:0",
+                          "src": "1219:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -1833,7 +1833,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "1239:10:0",
+                        "src": "1219:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1847,7 +1847,7 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "1239:19:0",
+                      "src": "1219:19:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
@@ -1861,7 +1861,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1239:32:0",
+                    "src": "1219:32:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -1869,7 +1869,7 @@
                   },
                   "id": 128,
                   "nodeType": "ExpressionStatement",
-                  "src": "1239:32:0"
+                  "src": "1219:32:0"
                 },
                 {
                   "eventCall": {
@@ -1884,7 +1884,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "1313:3:0",
+                          "src": "1291:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -1898,7 +1898,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "1313:10:0",
+                        "src": "1291:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1910,22 +1910,22 @@
                           {
                             "argumentTypes": null,
                             "id": 133,
-                            "name": "token",
+                            "name": "tuna",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 7,
-                            "src": "1333:5:0",
+                            "src": "1311:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Token_$379",
-                              "typeString": "contract Token"
+                              "typeIdentifier": "t_contract$_Tuna_$379",
+                              "typeString": "contract Tuna"
                             }
                           }
                         ],
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Token_$379",
-                              "typeString": "contract Token"
+                              "typeIdentifier": "t_contract$_Tuna_$379",
+                              "typeString": "contract Tuna"
                             }
                           ],
                           "id": 132,
@@ -1934,7 +1934,7 @@
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "1325:7:0",
+                          "src": "1303:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
@@ -1949,7 +1949,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1325:14:0",
+                        "src": "1303:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1962,7 +1962,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 82,
-                        "src": "1341:7:0",
+                        "src": "1318:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1975,7 +1975,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 10,
-                        "src": "1350:4:0",
+                        "src": "1327:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2002,11 +2002,11 @@
                         }
                       ],
                       "id": 129,
-                      "name": "TokensSold",
+                      "name": "TunaSold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 30,
-                      "src": "1302:10:0",
+                      "src": "1282:8:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256,uint256)"
@@ -2020,7 +2020,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1302:53:0",
+                    "src": "1282:50:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -2028,7 +2028,7 @@
                   },
                   "id": 138,
                   "nodeType": "EmitStatement",
-                  "src": "1297:58:0"
+                  "src": "1277:55:0"
                 }
               ]
             },
@@ -2049,7 +2049,7 @@
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
                   "scope": 140,
-                  "src": "830:12:0",
+                  "src": "812:12:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2060,7 +2060,7 @@
                     "id": 81,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "830:4:0",
+                    "src": "812:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2070,31 +2070,31 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "829:14:0"
+              "src": "811:14:0"
             },
             "returnParameters": {
               "id": 84,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "851:0:0"
+              "src": "833:0:0"
             },
             "scope": 141,
-            "src": "810:552:0",
+            "src": "792:547:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 142,
-        "src": "52:1321:0"
+        "src": "51:1299:0"
       }
     ],
-    "src": "0:1373:0"
+    "src": "0:1350:0"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/alexa/eth_swap/src/contracts/EthSwap.sol",
+    "absolutePath": "/C/Users/alexa/eth_swap/src/contracts/FishySwap.sol",
     "exportedSymbols": {
-      "EthSwap": [
+      "FishySwap": [
         141
       ]
     },
@@ -2113,13 +2113,13 @@
         "src": "0:23:0"
       },
       {
-        "absolutePath": "/C/Users/alexa/eth_swap/src/contracts/Token.sol",
-        "file": "./Token.sol",
+        "absolutePath": "/C/Users/alexa/eth_swap/src/contracts/Tuna.sol",
+        "file": "./Tuna.sol",
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 142,
         "sourceUnit": 380,
-        "src": "27:21:0",
+        "src": "27:20:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -2133,7 +2133,7 @@
         "linearizedBaseContracts": [
           141
         ],
-        "name": "EthSwap",
+        "name": "FishySwap",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -2142,7 +2142,7 @@
             "name": "name",
             "nodeType": "VariableDeclaration",
             "scope": 141,
-            "src": "73:47:0",
+            "src": "74:49:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -2153,7 +2153,7 @@
               "id": 3,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "73:6:0",
+              "src": "74:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -2161,7 +2161,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "hexValue": "4574685377617020496e7374616e742045786368616e6765",
+              "hexValue": "46697368795377617020496e7374616e742045786368616e6765",
               "id": 4,
               "isConstant": false,
               "isLValue": false,
@@ -2169,39 +2169,39 @@
               "kind": "string",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "94:26:0",
+              "src": "95:28:0",
               "subdenomination": null,
               "typeDescriptions": {
-                "typeIdentifier": "t_stringliteral_0cd767832a4b45e13c98bb05545343ab53826a9ea9075205b12bb04a1062f40e",
-                "typeString": "literal_string \"EthSwap Instant Exchange\""
+                "typeIdentifier": "t_stringliteral_ce42964a6346370f15b0094b099d2e6b291498c503bcf7894f231c63542ed3a6",
+                "typeString": "literal_string \"FishySwap Instant Exchange\""
               },
-              "value": "EthSwap Instant Exchange"
+              "value": "FishySwap Instant Exchange"
             },
             "visibility": "public"
           },
           {
             "constant": false,
             "id": 7,
-            "name": "token",
+            "name": "tuna",
             "nodeType": "VariableDeclaration",
             "scope": 141,
-            "src": "124:18:0",
+            "src": "127:16:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Token_$379",
-              "typeString": "contract Token"
+              "typeIdentifier": "t_contract$_Tuna_$379",
+              "typeString": "contract Tuna"
             },
             "typeName": {
               "contractScope": null,
               "id": 6,
-              "name": "Token",
+              "name": "Tuna",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 379,
-              "src": "124:5:0",
+              "src": "127:4:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Token_$379",
-                "typeString": "contract Token"
+                "typeIdentifier": "t_contract$_Tuna_$379",
+                "typeString": "contract Tuna"
               }
             },
             "value": null,
@@ -2213,7 +2213,7 @@
             "name": "rate",
             "nodeType": "VariableDeclaration",
             "scope": 141,
-            "src": "146:22:0",
+            "src": "147:22:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -2224,7 +2224,7 @@
               "id": 8,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "146:4:0",
+              "src": "147:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -2240,7 +2240,7 @@
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "165:3:0",
+              "src": "166:3:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_100_by_1",
@@ -2254,7 +2254,7 @@
             "anonymous": false,
             "documentation": null,
             "id": 20,
-            "name": "TokensPurchased",
+            "name": "TunaPurchased",
             "nodeType": "EventDefinition",
             "parameters": {
               "id": 19,
@@ -2267,7 +2267,7 @@
                   "name": "account",
                   "nodeType": "VariableDeclaration",
                   "scope": 20,
-                  "src": "200:15:0",
+                  "src": "199:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2278,7 +2278,7 @@
                     "id": 11,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "200:7:0",
+                    "src": "199:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2292,10 +2292,10 @@
                   "constant": false,
                   "id": 14,
                   "indexed": false,
-                  "name": "token",
+                  "name": "tuna",
                   "nodeType": "VariableDeclaration",
                   "scope": 20,
-                  "src": "220:13:0",
+                  "src": "219:12:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2306,7 +2306,7 @@
                     "id": 13,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "220:7:0",
+                    "src": "219:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2323,7 +2323,7 @@
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "scope": 20,
-                  "src": "238:11:0",
+                  "src": "236:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2334,7 +2334,7 @@
                     "id": 15,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "238:4:0",
+                    "src": "236:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2350,7 +2350,7 @@
                   "name": "rate",
                   "nodeType": "VariableDeclaration",
                   "scope": 20,
-                  "src": "254:9:0",
+                  "src": "252:9:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2361,7 +2361,7 @@
                     "id": 17,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "254:4:0",
+                    "src": "252:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2371,15 +2371,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "195:73:0"
+              "src": "194:72:0"
             },
-            "src": "174:95:0"
+            "src": "175:92:0"
           },
           {
             "anonymous": false,
             "documentation": null,
             "id": 30,
-            "name": "TokensSold",
+            "name": "TunaSold",
             "nodeType": "EventDefinition",
             "parameters": {
               "id": 29,
@@ -2392,7 +2392,7 @@
                   "name": "account",
                   "nodeType": "VariableDeclaration",
                   "scope": 30,
-                  "src": "295:15:0",
+                  "src": "291:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2403,7 +2403,7 @@
                     "id": 21,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "295:7:0",
+                    "src": "291:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2417,10 +2417,10 @@
                   "constant": false,
                   "id": 24,
                   "indexed": false,
-                  "name": "token",
+                  "name": "tuna",
                   "nodeType": "VariableDeclaration",
                   "scope": 30,
-                  "src": "315:13:0",
+                  "src": "311:12:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2431,7 +2431,7 @@
                     "id": 23,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "315:7:0",
+                    "src": "311:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2448,7 +2448,7 @@
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "scope": 30,
-                  "src": "333:11:0",
+                  "src": "328:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2459,7 +2459,7 @@
                     "id": 25,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "333:4:0",
+                    "src": "328:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2475,7 +2475,7 @@
                   "name": "rate",
                   "nodeType": "VariableDeclaration",
                   "scope": 30,
-                  "src": "349:9:0",
+                  "src": "344:9:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2486,7 +2486,7 @@
                     "id": 27,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "349:4:0",
+                    "src": "344:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2496,15 +2496,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "290:73:0"
+              "src": "286:72:0"
             },
-            "src": "274:90:0"
+            "src": "272:87:0"
           },
           {
             "body": {
               "id": 39,
               "nodeType": "Block",
-              "src": "402:24:0",
+              "src": "395:22:0",
               "statements": [
                 {
                   "expression": {
@@ -2517,14 +2517,14 @@
                     "leftHandSide": {
                       "argumentTypes": null,
                       "id": 35,
-                      "name": "token",
+                      "name": "tuna",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 7,
-                      "src": "407:5:0",
+                      "src": "400:4:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Token_$379",
-                        "typeString": "contract Token"
+                        "typeIdentifier": "t_contract$_Tuna_$379",
+                        "typeString": "contract Tuna"
                       }
                     },
                     "nodeType": "Assignment",
@@ -2532,25 +2532,25 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "id": 36,
-                      "name": "_token",
+                      "name": "_tuna",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 32,
-                      "src": "415:6:0",
+                      "src": "407:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Token_$379",
-                        "typeString": "contract Token"
+                        "typeIdentifier": "t_contract$_Tuna_$379",
+                        "typeString": "contract Tuna"
                       }
                     },
-                    "src": "407:14:0",
+                    "src": "400:12:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Token_$379",
-                      "typeString": "contract Token"
+                      "typeIdentifier": "t_contract$_Tuna_$379",
+                      "typeString": "contract Tuna"
                     }
                   },
                   "id": 38,
                   "nodeType": "ExpressionStatement",
-                  "src": "407:14:0"
+                  "src": "400:12:0"
                 }
               ]
             },
@@ -2568,42 +2568,42 @@
                 {
                   "constant": false,
                   "id": 32,
-                  "name": "_token",
+                  "name": "_tuna",
                   "nodeType": "VariableDeclaration",
                   "scope": 40,
-                  "src": "381:12:0",
+                  "src": "376:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_Token_$379",
-                    "typeString": "contract Token"
+                    "typeIdentifier": "t_contract$_Tuna_$379",
+                    "typeString": "contract Tuna"
                   },
                   "typeName": {
                     "contractScope": null,
                     "id": 31,
-                    "name": "Token",
+                    "name": "Tuna",
                     "nodeType": "UserDefinedTypeName",
                     "referencedDeclaration": 379,
-                    "src": "381:5:0",
+                    "src": "376:4:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Token_$379",
-                      "typeString": "contract Token"
+                      "typeIdentifier": "t_contract$_Tuna_$379",
+                      "typeString": "contract Tuna"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "380:14:0"
+              "src": "375:12:0"
             },
             "returnParameters": {
               "id": 34,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "402:0:0"
+              "src": "395:0:0"
             },
             "scope": 141,
-            "src": "369:57:0",
+            "src": "364:53:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -2612,7 +2612,7 @@
             "body": {
               "id": 79,
               "nodeType": "Block",
-              "src": "468:337:0",
+              "src": "459:328:0",
               "statements": [
                 {
                   "assignments": [
@@ -2622,10 +2622,10 @@
                     {
                       "constant": false,
                       "id": 44,
-                      "name": "tokenAmount",
+                      "name": "tunaAmount",
                       "nodeType": "VariableDeclaration",
                       "scope": 79,
-                      "src": "503:16:0",
+                      "src": "494:15:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -2636,7 +2636,7 @@
                         "id": 43,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "503:4:0",
+                        "src": "494:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2667,7 +2667,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 394,
-                        "src": "522:3:0",
+                        "src": "512:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
@@ -2681,7 +2681,7 @@
                       "memberName": "value",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "522:9:0",
+                      "src": "512:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -2696,20 +2696,20 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 10,
-                      "src": "534:4:0",
+                      "src": "524:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "522:16:0",
+                    "src": "512:16:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "503:35:0"
+                  "src": "494:34:0"
                 },
                 {
                   "expression": {
@@ -2739,18 +2739,18 @@
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
                                   "referencedDeclaration": 410,
-                                  "src": "639:4:0",
+                                  "src": "628:4:0",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_EthSwap_$141",
-                                    "typeString": "contract EthSwap"
+                                    "typeIdentifier": "t_contract$_FishySwap_$141",
+                                    "typeString": "contract FishySwap"
                                   }
                                 }
                               ],
                               "expression": {
                                 "argumentTypes": [
                                   {
-                                    "typeIdentifier": "t_contract$_EthSwap_$141",
-                                    "typeString": "contract EthSwap"
+                                    "typeIdentifier": "t_contract$_FishySwap_$141",
+                                    "typeString": "contract FishySwap"
                                   }
                                 ],
                                 "id": 53,
@@ -2759,7 +2759,7 @@
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "ElementaryTypeNameExpression",
-                                "src": "631:7:0",
+                                "src": "620:7:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_address_$",
                                   "typeString": "type(address)"
@@ -2774,7 +2774,7 @@
                               "lValueRequested": false,
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "631:13:0",
+                              "src": "620:13:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -2791,14 +2791,14 @@
                             "expression": {
                               "argumentTypes": null,
                               "id": 51,
-                              "name": "token",
+                              "name": "tuna",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 7,
-                              "src": "615:5:0",
+                              "src": "605:4:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Token_$379",
-                                "typeString": "contract Token"
+                                "typeIdentifier": "t_contract$_Tuna_$379",
+                                "typeString": "contract Tuna"
                               }
                             },
                             "id": 52,
@@ -2809,7 +2809,7 @@
                             "memberName": "balanceOf",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 232,
-                            "src": "615:15:0",
+                            "src": "605:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
                               "typeString": "function (address) view external returns (uint256)"
@@ -2823,7 +2823,7 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "615:30:0",
+                          "src": "605:29:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -2834,17 +2834,17 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "id": 57,
-                          "name": "tokenAmount",
+                          "name": "tunaAmount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 44,
-                          "src": "649:11:0",
+                          "src": "638:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "615:45:0",
+                        "src": "605:43:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -2866,7 +2866,7 @@
                         398
                       ],
                       "referencedDeclaration": 397,
-                      "src": "607:7:0",
+                      "src": "597:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
@@ -2880,7 +2880,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "607:54:0",
+                    "src": "597:52:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -2888,7 +2888,7 @@
                   },
                   "id": 60,
                   "nodeType": "ExpressionStatement",
-                  "src": "607:54:0"
+                  "src": "597:52:0"
                 },
                 {
                   "expression": {
@@ -2903,7 +2903,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "683:3:0",
+                          "src": "670:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -2917,7 +2917,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "683:10:0",
+                        "src": "670:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -2926,11 +2926,11 @@
                       {
                         "argumentTypes": null,
                         "id": 66,
-                        "name": "tokenAmount",
+                        "name": "tunaAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 44,
-                        "src": "695:11:0",
+                        "src": "682:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2951,14 +2951,14 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 61,
-                        "name": "token",
+                        "name": "tuna",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 7,
-                        "src": "668:5:0",
+                        "src": "656:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Token_$379",
-                          "typeString": "contract Token"
+                          "typeIdentifier": "t_contract$_Tuna_$379",
+                          "typeString": "contract Tuna"
                         }
                       },
                       "id": 63,
@@ -2969,7 +2969,7 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 290,
-                      "src": "668:14:0",
+                      "src": "656:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (address,uint256) external returns (bool)"
@@ -2983,7 +2983,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "668:39:0",
+                    "src": "656:37:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2991,7 +2991,7 @@
                   },
                   "id": 68,
                   "nodeType": "ExpressionStatement",
-                  "src": "668:39:0"
+                  "src": "656:37:0"
                 },
                 {
                   "eventCall": {
@@ -3006,7 +3006,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "754:3:0",
+                          "src": "738:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -3020,7 +3020,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "754:10:0",
+                        "src": "738:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -3032,22 +3032,22 @@
                           {
                             "argumentTypes": null,
                             "id": 73,
-                            "name": "token",
+                            "name": "tuna",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 7,
-                            "src": "774:5:0",
+                            "src": "758:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Token_$379",
-                              "typeString": "contract Token"
+                              "typeIdentifier": "t_contract$_Tuna_$379",
+                              "typeString": "contract Tuna"
                             }
                           }
                         ],
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Token_$379",
-                              "typeString": "contract Token"
+                              "typeIdentifier": "t_contract$_Tuna_$379",
+                              "typeString": "contract Tuna"
                             }
                           ],
                           "id": 72,
@@ -3056,7 +3056,7 @@
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "766:7:0",
+                          "src": "750:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
@@ -3071,7 +3071,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "766:14:0",
+                        "src": "750:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -3080,11 +3080,11 @@
                       {
                         "argumentTypes": null,
                         "id": 75,
-                        "name": "tokenAmount",
+                        "name": "tunaAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 44,
-                        "src": "782:11:0",
+                        "src": "765:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3097,7 +3097,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 10,
-                        "src": "795:4:0",
+                        "src": "777:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3124,11 +3124,11 @@
                         }
                       ],
                       "id": 69,
-                      "name": "TokensPurchased",
+                      "name": "TunaPurchased",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 20,
-                      "src": "738:15:0",
+                      "src": "724:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256,uint256)"
@@ -3142,7 +3142,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "738:62:0",
+                    "src": "724:58:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -3150,7 +3150,7 @@
                   },
                   "id": 78,
                   "nodeType": "EmitStatement",
-                  "src": "733:67:0"
+                  "src": "719:63:0"
                 }
               ]
             },
@@ -3165,16 +3165,16 @@
               "id": 41,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "449:2:0"
+              "src": "440:2:0"
             },
             "returnParameters": {
               "id": 42,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "468:0:0"
+              "src": "459:0:0"
             },
             "scope": 141,
-            "src": "431:374:0",
+            "src": "422:365:0",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
@@ -3183,7 +3183,7 @@
             "body": {
               "id": 139,
               "nodeType": "Block",
-              "src": "851:511:0",
+              "src": "833:506:0",
               "statements": [
                 {
                   "expression": {
@@ -3212,7 +3212,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 394,
-                                "src": "927:3:0",
+                                "src": "908:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
@@ -3226,7 +3226,7 @@
                               "memberName": "sender",
                               "nodeType": "MemberAccess",
                               "referencedDeclaration": null,
-                              "src": "927:10:0",
+                              "src": "908:10:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address_payable",
                                 "typeString": "address payable"
@@ -3243,14 +3243,14 @@
                             "expression": {
                               "argumentTypes": null,
                               "id": 86,
-                              "name": "token",
+                              "name": "tuna",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 7,
-                              "src": "911:5:0",
+                              "src": "893:4:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Token_$379",
-                                "typeString": "contract Token"
+                                "typeIdentifier": "t_contract$_Tuna_$379",
+                                "typeString": "contract Tuna"
                               }
                             },
                             "id": 87,
@@ -3261,7 +3261,7 @@
                             "memberName": "balanceOf",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 232,
-                            "src": "911:15:0",
+                            "src": "893:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
                               "typeString": "function (address) view external returns (uint256)"
@@ -3275,7 +3275,7 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "911:27:0",
+                          "src": "893:26:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -3290,13 +3290,13 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 82,
-                          "src": "942:7:0",
+                          "src": "923:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "911:38:0",
+                        "src": "893:37:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -3318,7 +3318,7 @@
                         398
                       ],
                       "referencedDeclaration": 397,
-                      "src": "903:7:0",
+                      "src": "885:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
@@ -3332,7 +3332,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "903:48:0",
+                    "src": "885:47:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -3340,7 +3340,7 @@
                   },
                   "id": 94,
                   "nodeType": "ExpressionStatement",
-                  "src": "903:48:0"
+                  "src": "885:47:0"
                 },
                 {
                   "assignments": [
@@ -3353,7 +3353,7 @@
                       "name": "etherAmount",
                       "nodeType": "VariableDeclaration",
                       "scope": 139,
-                      "src": "1004:16:0",
+                      "src": "985:16:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -3364,7 +3364,7 @@
                         "id": 95,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "1004:4:0",
+                        "src": "985:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3393,7 +3393,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 82,
-                      "src": "1023:7:0",
+                      "src": "1004:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3408,20 +3408,20 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 10,
-                      "src": "1033:4:0",
+                      "src": "1014:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1023:14:0",
+                    "src": "1004:14:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "1004:33:0"
+                  "src": "985:33:0"
                 },
                 {
                   "expression": {
@@ -3450,18 +3450,18 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 410,
-                                "src": "1124:4:0",
+                                "src": "1105:4:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_EthSwap_$141",
-                                  "typeString": "contract EthSwap"
+                                  "typeIdentifier": "t_contract$_FishySwap_$141",
+                                  "typeString": "contract FishySwap"
                                 }
                               }
                             ],
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_EthSwap_$141",
-                                  "typeString": "contract EthSwap"
+                                  "typeIdentifier": "t_contract$_FishySwap_$141",
+                                  "typeString": "contract FishySwap"
                                 }
                               ],
                               "id": 102,
@@ -3470,7 +3470,7 @@
                               "isPure": true,
                               "lValueRequested": false,
                               "nodeType": "ElementaryTypeNameExpression",
-                              "src": "1116:7:0",
+                              "src": "1097:7:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_type$_t_address_$",
                                 "typeString": "type(address)"
@@ -3485,7 +3485,7 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "1116:13:0",
+                            "src": "1097:13:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -3499,7 +3499,7 @@
                           "memberName": "balance",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "1116:21:0",
+                          "src": "1097:21:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -3514,13 +3514,13 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 96,
-                          "src": "1141:11:0",
+                          "src": "1122:11:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "1116:36:0",
+                        "src": "1097:36:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -3542,7 +3542,7 @@
                         398
                       ],
                       "referencedDeclaration": 397,
-                      "src": "1108:7:0",
+                      "src": "1089:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
@@ -3556,7 +3556,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1108:45:0",
+                    "src": "1089:45:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -3564,7 +3564,7 @@
                   },
                   "id": 109,
                   "nodeType": "ExpressionStatement",
-                  "src": "1108:45:0"
+                  "src": "1089:45:0"
                 },
                 {
                   "expression": {
@@ -3579,7 +3579,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "1179:3:0",
+                          "src": "1159:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -3593,7 +3593,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "1179:10:0",
+                        "src": "1159:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -3609,18 +3609,18 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 410,
-                            "src": "1199:4:0",
+                            "src": "1179:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_EthSwap_$141",
-                              "typeString": "contract EthSwap"
+                              "typeIdentifier": "t_contract$_FishySwap_$141",
+                              "typeString": "contract FishySwap"
                             }
                           }
                         ],
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_EthSwap_$141",
-                              "typeString": "contract EthSwap"
+                              "typeIdentifier": "t_contract$_FishySwap_$141",
+                              "typeString": "contract FishySwap"
                             }
                           ],
                           "id": 115,
@@ -3629,7 +3629,7 @@
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "1191:7:0",
+                          "src": "1171:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
@@ -3644,7 +3644,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1191:13:0",
+                        "src": "1171:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -3657,7 +3657,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 82,
-                        "src": "1206:7:0",
+                        "src": "1186:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3682,14 +3682,14 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 110,
-                        "name": "token",
+                        "name": "tuna",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 7,
-                        "src": "1160:5:0",
+                        "src": "1141:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Token_$379",
-                          "typeString": "contract Token"
+                          "typeIdentifier": "t_contract$_Tuna_$379",
+                          "typeString": "contract Tuna"
                         }
                       },
                       "id": 112,
@@ -3700,7 +3700,7 @@
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 378,
-                      "src": "1160:18:0",
+                      "src": "1141:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (address,address,uint256) external returns (bool)"
@@ -3714,7 +3714,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1160:54:0",
+                    "src": "1141:53:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3722,7 +3722,7 @@
                   },
                   "id": 120,
                   "nodeType": "ExpressionStatement",
-                  "src": "1160:54:0"
+                  "src": "1141:53:0"
                 },
                 {
                   "expression": {
@@ -3735,7 +3735,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 96,
-                        "src": "1259:11:0",
+                        "src": "1239:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3758,7 +3758,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "1239:3:0",
+                          "src": "1219:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -3772,7 +3772,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "1239:10:0",
+                        "src": "1219:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -3786,7 +3786,7 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "1239:19:0",
+                      "src": "1219:19:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
@@ -3800,7 +3800,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1239:32:0",
+                    "src": "1219:32:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -3808,7 +3808,7 @@
                   },
                   "id": 128,
                   "nodeType": "ExpressionStatement",
-                  "src": "1239:32:0"
+                  "src": "1219:32:0"
                 },
                 {
                   "eventCall": {
@@ -3823,7 +3823,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 394,
-                          "src": "1313:3:0",
+                          "src": "1291:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -3837,7 +3837,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "1313:10:0",
+                        "src": "1291:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -3849,22 +3849,22 @@
                           {
                             "argumentTypes": null,
                             "id": 133,
-                            "name": "token",
+                            "name": "tuna",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 7,
-                            "src": "1333:5:0",
+                            "src": "1311:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Token_$379",
-                              "typeString": "contract Token"
+                              "typeIdentifier": "t_contract$_Tuna_$379",
+                              "typeString": "contract Tuna"
                             }
                           }
                         ],
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Token_$379",
-                              "typeString": "contract Token"
+                              "typeIdentifier": "t_contract$_Tuna_$379",
+                              "typeString": "contract Tuna"
                             }
                           ],
                           "id": 132,
@@ -3873,7 +3873,7 @@
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "1325:7:0",
+                          "src": "1303:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
@@ -3888,7 +3888,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1325:14:0",
+                        "src": "1303:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -3901,7 +3901,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 82,
-                        "src": "1341:7:0",
+                        "src": "1318:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3914,7 +3914,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 10,
-                        "src": "1350:4:0",
+                        "src": "1327:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3941,11 +3941,11 @@
                         }
                       ],
                       "id": 129,
-                      "name": "TokensSold",
+                      "name": "TunaSold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 30,
-                      "src": "1302:10:0",
+                      "src": "1282:8:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256,uint256)"
@@ -3959,7 +3959,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1302:53:0",
+                    "src": "1282:50:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -3967,7 +3967,7 @@
                   },
                   "id": 138,
                   "nodeType": "EmitStatement",
-                  "src": "1297:58:0"
+                  "src": "1277:55:0"
                 }
               ]
             },
@@ -3988,7 +3988,7 @@
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
                   "scope": 140,
-                  "src": "830:12:0",
+                  "src": "812:12:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3999,7 +3999,7 @@
                     "id": 81,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "830:4:0",
+                    "src": "812:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -4009,35 +4009,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "829:14:0"
+              "src": "811:14:0"
             },
             "returnParameters": {
               "id": 84,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "851:0:0"
+              "src": "833:0:0"
             },
             "scope": 141,
-            "src": "810:552:0",
+            "src": "792:547:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 142,
-        "src": "52:1321:0"
+        "src": "51:1299:0"
       }
     ],
-    "src": "0:1373:0"
+    "src": "0:1350:0"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
-    "5777": {
+    "42": {
       "events": {
-        "0x6faf93231a456e552dbc9961f58d9713ee4f2e69d15f1975b050ef0911053a7b": {
+        "0x6250366905ceab11a0d8aa692ff750b5024136148641ad569c7a507b3d45a692": {
           "anonymous": false,
           "inputs": [
             {
@@ -4049,7 +4049,7 @@
             {
               "indexed": false,
               "internalType": "address",
-              "name": "token",
+              "name": "tuna",
               "type": "address"
             },
             {
@@ -4065,10 +4065,10 @@
               "type": "uint256"
             }
           ],
-          "name": "TokensPurchased",
+          "name": "TunaPurchased",
           "type": "event"
         },
-        "0x697c42d55a5e1fed3f464ec6f38b32546a0bd368dc8068b065c67566d73f3290": {
+        "0x8f3b57cc2b026ca3fa2c8e412f024100c4b39b94f9260408ba44f983abb2f3b8": {
           "anonymous": false,
           "inputs": [
             {
@@ -4080,7 +4080,7 @@
             {
               "indexed": false,
               "internalType": "address",
-              "name": "token",
+              "name": "tuna",
               "type": "address"
             },
             {
@@ -4096,17 +4096,86 @@
               "type": "uint256"
             }
           ],
-          "name": "TokensSold",
+          "name": "TunaSold",
           "type": "event"
         }
       },
       "links": {},
-      "address": "0x6762F729af29f243E7c3902754365fAC7AA4cDE7",
-      "transactionHash": "0x2df8f93786aee3f83501c7fc373fd8622c0e58bc785b22fbaf7ae365d94ac877"
+      "address": "0xd5E3A35c9461E2b67370c773aA903b7B39c1B85B",
+      "transactionHash": "0x3a7ab41f0c2fe6762e9083e543327c4b24d6a7981c6a6f18445c8a5c7bc436a9"
+    },
+    "5777": {
+      "events": {
+        "0x6250366905ceab11a0d8aa692ff750b5024136148641ad569c7a507b3d45a692": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "tuna",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "rate",
+              "type": "uint256"
+            }
+          ],
+          "name": "TunaPurchased",
+          "type": "event"
+        },
+        "0x8f3b57cc2b026ca3fa2c8e412f024100c4b39b94f9260408ba44f983abb2f3b8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "tuna",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "rate",
+              "type": "uint256"
+            }
+          ],
+          "name": "TunaSold",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x5141a550737FC853b454aC6F41AEEFE08c9d0d25",
+      "transactionHash": "0x22267bbb8c2c373eee33fb1f2915815ce25afff98dc4d958c2907aa05f6e18e6"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-08-07T12:34:45.974Z",
+  "updatedAt": "2020-09-14T14:11:24.680Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
